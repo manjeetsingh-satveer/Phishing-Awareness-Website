@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Phishing Awareness</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Phishing Awareness Simulator</h1>
+    <p>Can you spot a phishing attempt?</p>
+  </header>
+
+  <section id="phishing-test">
+    <h2>Example Email</h2>
+    <p><strong>From:</strong> Amazon Support &lt;support-amazon@shady-link.com&gt;</p>
+    <p><strong>Subject:</strong> Urgent! Your account has been compromised!</p>
+    <p>Click the link below to secure your account immediately:</p>
+    <a href="#" onclick="checkPhishing()">http://amazon-security-check-now.com/login</a>
+  </section>
+
+  <section id="result"></section>
+
+  <section id="tips">
+    <h2>How to Spot Phishing:</h2>
+    <ul>
+      <li>Check the sender's email address carefully.</li>
+      <li>Look for misspellings or urgent scare tactics.</li>
+      <li>Never click on suspicious links — go directly to the official site.</li>
+    </ul>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
