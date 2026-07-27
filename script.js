@@ -1,7 +1,2 @@
-function checkPhishing() {
-  const result = document.getElementById('result');
-  result.innerHTML = `
-    <h2>⚠️ Warning: Phishing Detected</h2>
-    <p>This link uses a fake domain and scare tactics to trick users. Always check the URL carefully and don’t click on suspicious links.</p>
-  `;
-}
+const buttons=document.querySelectorAll('[data-answer]'),result=document.querySelector('#result'),score=document.querySelector('#score'),done=document.querySelector('#done'),bar=document.querySelector('#bar');
+function finish(correct){buttons.forEach(b=>{b.disabled=true;b.classList.toggle('correct',b.dataset.answer==='report');if(!correct&&b.dataset.answer==='safe')b.classList.add('incorrect')});score.textContent=correct?'100':'25';done.textContent='1';bar.style.width='100%';result.className='result '+(correct?'success':'warning');result.innerHTML=correct?'<b>✓</b><div><p class="eyebrow">GREAT CATCH</p><h3>This is a phishing attempt.</h3><p>The sender domain is not amazon.com, the message creates urgency, and the button could send you to a fake sign-in page. Report it and use the official app or website instead.</p></div>':'<b>!</b><div><p class="eyebrow">KEEP LEARNING</p><h3>This message is unsafe.</h3><p>Attackers use legitimate-looking brands and urgent language to rush you. amazon-security-help.co is not an official Amazon domain.</p></div>';result.scrollIntoView({behavior:'smooth',block:'center'})}buttons.forEach(b=>b.onclick=()=>finish(b.dataset.answer==='report'));document.querySelector('#fakeLink').onclick=()=>finish(false);document.querySelector('#hint').onclick=()=>{const e=document.querySelector('#clues');e.hidden=!e.hidden};

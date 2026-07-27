@@ -1,36 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Phishing Awareness</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header>
-    <h1>Phishing Awareness Simulator</h1>
-    <p>Can you spot a phishing attempt?</p>
-  </header>
-
-  <section id="phishing-test">
-    <h2>Example Email</h2>
-    <p><strong>From:</strong> Amazon Support &lt;support-amazon@shady-link.com&gt;</p>
-    <p><strong>Subject:</strong> Urgent! Your account has been compromised!</p>
-    <p>Click the link below to secure your account immediately:</p>
-    <a href="#" onclick="checkPhishing()">http://amazon-security-check-now.com/login</a>
-  </section>
-
-  <section id="result"></section>
-
-  <section id="tips">
-    <h2>How to Spot Phishing:</h2>
-    <ul>
-      <li>Check the sender's email address carefully.</li>
-      <li>Look for misspellings or urgent scare tactics.</li>
-      <li>Never click on suspicious links — go directly to the official site.</li>
-    </ul>
-  </section>
-
-  <script src="script.js"></script>
-</body>
-</html>
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>PhishReady | Security Awareness</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Mono&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"></head>
+<body><div class="app">
+<aside><a class="brand" href="#"><b>P</b>phishready</a><nav><a class="active" href="#">⌂ &nbsp; Learning home</a><a href="#challenge">◉ &nbsp; Simulations</a><a href="#tips">◇ &nbsp; Security toolkit</a></nav><p class="environment">● Training environment</p></aside>
+<main><header><span>Security Awareness <i>/</i> Email defense</span><div class="user"><b>MS</b> Learner</div></header><div class="content">
+<section class="hero"><div><p class="eyebrow">ACTIVE LEARNING PATH</p><h1>Think before<br><em>you click.</em></h1><p>Practice identifying the social-engineering signals that keep your accounts and organization safe.</p></div><div class="progress"><div class="ring"><strong id="score">0</strong><small>points</small></div><div><small>Today's progress</small><b><span id="done">0</span> of 1 challenge complete</b><div class="bar"><span id="bar"></span></div></div></div></section>
+<section class="challenge" id="challenge"><div class="heading"><div><p class="eyebrow">PHISHING SIMULATION · 02 MIN</p><h2>Is this message safe?</h2></div><span class="level">● Intermediate</span></div><div class="grid">
+<article class="email"><div class="toolbar"><span></span><span></span><span></span>New message</div><div class="message"><div class="sender"><b>A</b><div><strong>Amazon Account Security</strong><small>account-alert@amazon-security-help.co</small></div><time>10:42 AM</time></div><hr><small>To: you</small><h3>Action required: your account has been locked</h3><p>We noticed a sign-in attempt from a new device. For your protection, your account has been temporarily restricted.</p><p>Confirm your details within <strong>30 minutes</strong> to restore access.</p><button id="fakeLink">Restore my account</button><p>Amazon Account Services</p></div></article>
+<section class="decision"><p class="eyebrow">YOUR DECISION</p><h3>What would you do?</h3><p>Review the message, then choose the safest response.</p><button data-answer="report"><span>⚑</span><b>Report as phishing</b><small>Flag this suspicious email</small></button><button data-answer="safe"><span>✓</span><b>This looks legitimate</b><small>Keep the message</small></button><button class="hint" id="hint">Need a hint? <b>Show clues</b></button><div id="clues" hidden><p>01 &nbsp; Inspect the sender's domain.</p><p>02 &nbsp; Urgency is a warning sign.</p><p>03 &nbsp; Use a trusted path.</p></div></section></div></section>
+<section class="result" id="result"><b>✦</b><div><p class="eyebrow">QUICK REMINDER</p><h3>Trust the signal, not the logo.</h3><p>Criminals often imitate familiar brands. Verify the sender, slow down, and navigate to the official site yourself.</p></div></section>
+<section class="tips" id="tips"><div><p class="eyebrow">SECURITY TOOLKIT</p><h2>Three habits that block phishing.</h2></div><div class="cards"><article><span>01</span><h3>Check the sender</h3><p>A familiar display name can hide a look-alike email address.</p></article><article><span>02</span><h3>Pause on urgency</h3><p>Pressure is designed to bypass careful thinking.</p></article><article><span>03</span><h3>Use trusted paths</h3><p>Open the official app or type the website yourself.</p></article></div></section>
+</div></main></div><script src="script.js"></script></body></html>
